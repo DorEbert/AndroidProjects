@@ -30,19 +30,19 @@ public class ScoreSheetActivity extends AppCompatActivity {
         linearLayout = findViewById(R.id.linear_layout);
         addHeadLine();
         addImage();
-        currentPoints = getIntent().getExtras().getInt("myPoints");
+        currentPoints = getIntent().getExtras().getInt(Global_Variable.MY_POINTS);
         amountOfGamesPlayed++;
         if(currentPoints > maxPointAchieved)
             maxPointAchieved = currentPoints;
-        addLabel("Current Points",currentPoints);
-        addLabel("Max Points achieved ",maxPointAchieved);
-        addLabel("Games Played",amountOfGamesPlayed);
+        addLabel(Global_Variable.CURRENT_POINTS,currentPoints);
+        addLabel(Global_Variable.MAX_POINTS_ACHIEVED,maxPointAchieved);
+        addLabel(Global_Variable.GAMES_PLAYED,amountOfGamesPlayed);
         addButton();
     }
     private void addHeadLine(){
         //Set Button Settings
         Button welcomeButton = new Button(this);
-        welcomeButton.setText("Score Sheet");
+        welcomeButton.setText(Global_Variable.SCORE_SHEET);
         welcomeButton.setTextSize(mainActivityWitdh/28);
         welcomeButton.setWidth(mainActivityWitdh);
         welcomeButton.setHeight(mainActivityHeight/7);
@@ -52,7 +52,6 @@ public class ScoreSheetActivity extends AppCompatActivity {
         linearLayout.addView(welcomeButton);
     }
     private void addLabel(String text,int number){
-        //Set UserName Label Setting
         LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams((int)(mainActivityWitdh *0.9),mainActivityHeight/20);
         lparams.gravity = Gravity.CENTER;
         TextView userNameLabel = new TextView(this);
@@ -88,7 +87,7 @@ public class ScoreSheetActivity extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
-        loginButton.setText("New Game");
+        loginButton.setText(Global_Variable.NEW_GAME);
         LinearLayout.LayoutParams loginButtonLayoutParams =
                 new LinearLayout.LayoutParams((int)(mainActivityWitdh *0.5),mainActivityHeight/20);
         loginButtonLayoutParams.gravity = Gravity.CENTER;

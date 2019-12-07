@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -22,63 +23,62 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity  {
     private LinearLayout linearLayout;
-    private RelativeLayout relativeLayout;
     private RelativeLayout fireAttackslinearWrapper;
+    private FireAttackProducer fireAttackProducer;
+    private boolean isToCreateRainFire;
     private LinearLayout userHPAndLifeChancesLayout;
     private int mainActivityWitdh;
     private int mainActivityHeight;
     private Button pointsButton;
     private ImageView spaceShip;
     private ProgressBar healthProgressBar;
-    private final int LIFECHANCES = 3;
     private int currentLife;
-    private final int AMOUNT_OF_HORIZENTAL_LAYOUTS = 1;
     private int myPoints = 0;
-    private final String FIREICONID = "lifeHeartIcon";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_activity);
+        isToCreateRainFire = true;
         setSettingOfActivity();
+        addLifeChances();
+        addHealthProgressBar();
+        linearLayout.addView(userHPAndLifeChancesLayout);
+        initialLayoutFireAttack();
+        linearLayout.addView(fireAttackslinearWrapper);
+        addSpaceShip();
+        // set Settings for fire attack
+        fireAttackProducer = new FireAttackProducer(mainActivityWitdh/10,mainActivityWitdh/10);
+        Bitmap fireBmp= BitmapFactory.decodeResource(getResources(),R.drawable.fireattack);
+        fireBmp=Bitmap.createScaledBitmap(fireBmp, fireAttackProducer.fireWidth,fireAttackProducer.fireHeight, true);
+        fireAttackProducer.fireBmp = fireBmp;
+        Random r = new Random();
+        startRainFire(fireAttackProducer.fireWidth);
+        linearLayout.addView(spaceShip);
+        addTouchEventToSpaceShip();
+    }
+    private void addLifeChances() {
         userHPAndLifeChancesLayout = new LinearLayout(this);
         userHPAndLifeChancesLayout.setOrientation(LinearLayout.HORIZONTAL);
         //1.1 Set life Image settings
-        currentLife = 3;
-        Bitmap bmp = getUIBmpFireAttack();
-        for(int i = 0 ;i < LIFECHANCES ; i++){
+        currentLife = Global_Variable.LIFECHANCES;
+        Bitmap bmp = getUIBmpForHearts();
+        for(int i = 0 ;i < currentLife ; i++){
             ImageView lifeHeartIcon = new ImageView(this);
             lifeHeartIcon.setId(i);
             lifeHeartIcon.setImageBitmap(bmp);
             userHPAndLifeChancesLayout.addView(lifeHeartIcon);
         }
-        linearLayout.addView(userHPAndLifeChancesLayout);
-        initialLayoutFireAttack();
-        linearLayout.addView(fireAttackslinearWrapper);
-        addHealthProgressBar();
-        addSpaceShip();
-        // set Settings for fire attack
-        final int fireWidth=mainActivityWitdh/10;
-        final int fireHeight=mainActivityHeight/10;
-        Bitmap fireBmp;
-        fireBmp=BitmapFactory.decodeResource(getResources(),R.drawable.fireattack);//image is your image
-        fireBmp=Bitmap.createScaledBitmap(fireBmp, fireWidth,fireHeight, true);
-        LinearLayout.LayoutParams fireImageLayoutParams = new LinearLayout.LayoutParams(fireWidth, fireHeight);
-        fireImageLayoutParams.setMargins(0
-                ,0
-                ,0
-                ,0);
-        fireImageLayoutParams.gravity = Gravity.LEFT;
-        Random r = new Random();
-        startRainFire(fireBmp,fireWidth,fireHeight,fireImageLayoutParams);
-        linearLayout.addView(spaceShip);
-        addTouchEventToSpaceShip();
+    }
+    private void initialCurrentLifeAndHp(){
+        currentLife = Global_Variable.LIFECHANCES;
+        healthProgressBar.setProgress(Global_Variable.STARTED_HP);
     }
     private void initialLayoutFireAttack() {
         fireAttackslinearWrapper = new RelativeLayout(this);
-        LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(mainActivityWitdh,(int)(mainActivityHeight *0.73));
+        LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(mainActivityWitdh,(int)(mainActivityHeight * 0.75));
         fireAttackslinearWrapper.setLayoutParams(lparams);
     }
-    private Bitmap getUIBmpFireAttack() {
+    private Bitmap getUIBmpForHearts() {
         Bitmap bmp;
         int width=mainActivityHeight/25;
         int height=mainActivityHeight/25;
@@ -92,7 +92,7 @@ public class GameActivity extends AppCompatActivity  {
         healthProgressBar.getProgressDrawable().setColorFilter(
                 getApplication().getResources().getColor(R.color.colorRed)
                 , android.graphics.PorterDuff.Mode.SRC_IN);
-        healthProgressBar.setProgress(100);
+        healthProgressBar.setProgress(Global_Variable.STARTED_HP);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(mainActivityWitdh, mainActivityHeight/24);
         healthProgressBar.setLayoutParams(params);
         userHPAndLifeChancesLayout.addView(healthProgressBar);
@@ -103,6 +103,7 @@ public class GameActivity extends AppCompatActivity  {
         final int spaceShipHeight=mainActivityHeight/10;
         spaceShip = new ImageView(this);
         LinearLayout.LayoutParams spaceShipLayoutParams = new LinearLayout.LayoutParams(spaceShipWidth, spaceShipHeight);
+        //spaceShipLayoutParams.gravity = Gravity.CENTER;
         spaceShipLayoutParams.gravity = Gravity.CENTER;
         spaceShip.setLayoutParams(spaceShipLayoutParams);
         //  Start spaceShipBmp
@@ -111,32 +112,24 @@ public class GameActivity extends AppCompatActivity  {
         spaceShip.setImageBitmap(spaceShipBmp);
         //  End spaceShipBmp
     }
-    private final int LIFE_DIDACTIC = 20;
     private synchronized void collisionDetection(final ImageView v1,final ImageView v2){
-
         Thread t = new Thread() {
             @Override
             public void run() {
                 try {
-                    while (true) {
+                    while (isToCreateRainFire) {
                         Thread.sleep(30);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run(){
                                     if (isCllision(v1, v2)) {
-                                        healthProgressBar.setProgress((int) (healthProgressBar.getProgress() - LIFE_DIDACTIC));
+                                        healthProgressBar.setProgress((int) (healthProgressBar.getProgress() - Global_Variable.LIFE_DIDACTIC));
                                         if(healthProgressBar.getProgress() == 0){
                                             userHPAndLifeChancesLayout.removeView(userHPAndLifeChancesLayout.findViewById(currentLife-1));
                                             currentLife--;
-                                            healthProgressBar.setProgress(100);
+                                            healthProgressBar.setProgress(Global_Variable.STARTED_HP);
                                             if(currentLife <=0 ){
-                                                currentLife = LIFECHANCES;
-                                                Intent myIntent = new Intent(GameActivity.this,
-                                                        ScoreSheetActivity.class);
-                                                myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                                myIntent.putExtra("myPoints", myPoints);
-                                                myPoints = 0;
-                                                startActivity(myIntent);
+                                                openScoreSheetActivity();
                                             }
                                         }
                                         v1.setX(0);
@@ -144,7 +137,7 @@ public class GameActivity extends AppCompatActivity  {
                                         v1.animate().cancel();
                                         fireAttackslinearWrapper.removeView(v1);
                                 }else {
-                                        pointsButton.setText("Points: " + myPoints);
+                                        pointsButton.setText(Global_Variable.CURRENT_POINTS + " : " + myPoints);
                                     }
                             }
                         });
@@ -152,22 +145,17 @@ public class GameActivity extends AppCompatActivity  {
                 }catch (InterruptedException e) {}}};
         t.start();
     }
-    private synchronized void startRainFire(final Bitmap fireBmp,final int fireWidth,final int fireHeight,final LinearLayout.LayoutParams fireImageLayoutParams){
+    private synchronized void startRainFire(final int fireWidth){
         Thread t = new Thread() {
-            Random r = new Random();
             int fireXlocation;            @Override
             public void run() {
                 try {
-                    while (true) {
+                    while (isToCreateRainFire) {
                         Thread.sleep(1000);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run(){
-                                ImageView fireAttack = getFireAttack(fireBmp, fireImageLayoutParams);
-                                int wi = mainActivityWitdh;
-                                fireXlocation = r.nextInt(wi - fireWidth) ;
-                                fireAttack.setX(fireXlocation);
-                                fireAttack.setY(0);
+                                ImageView fireAttack = getFireAttack();
                                 collisionDetection(fireAttack,spaceShip);
                                 fireAttackslinearWrapper.addView(fireAttack);
                             }
@@ -231,7 +219,7 @@ public class GameActivity extends AppCompatActivity  {
         linearLayout = findViewById(R.id.linear_layout);
         //Set pointsButton Settings
         pointsButton = new Button(this);
-        pointsButton.setText("Points:");
+        pointsButton.setText(Global_Variable.CURRENT_POINTS);
         pointsButton.setTextSize(mainActivityWitdh/35);
         pointsButton.setWidth(mainActivityWitdh);
         pointsButton.setHeight(mainActivityHeight/12);
@@ -240,10 +228,9 @@ public class GameActivity extends AppCompatActivity  {
         pointsButton.setTextColor(getApplication().getResources().getColor(R.color.colorBlack));
         linearLayout.addView(pointsButton);
     }
-    private ImageView getFireAttack(Bitmap fireBmp,LinearLayout.LayoutParams fireImageLayoutParams){
-        final ImageView fireAttack = new ImageView(this);
-        fireAttack.setLayoutParams(fireImageLayoutParams);
-        fireAttack.setImageBitmap(fireBmp);
+    private ImageView getFireAttack(){
+        final ImageView fireAttack = fireAttackProducer.getFireAttack(this, mainActivityWitdh);
+        //fireAttack.setImageBitmap(fireBmp);
         fireAttack.animate()
                 .translationY(mainActivityHeight)
                 .setDuration(5000)
@@ -251,18 +238,24 @@ public class GameActivity extends AppCompatActivity  {
                     @Override
                     public void run() {
                         fireAttackslinearWrapper.removeView(fireAttack);
-                        myPoints+=10;
+                        myPoints+=Global_Variable.POINTS_PER_FIREATTACK;
                     }
                 }).start();
         return fireAttack;
     }
     @Override
     public void onBackPressed(){
-        currentLife = LIFECHANCES;
+        openScoreSheetActivity();
+    }
+    private void openScoreSheetActivity() {
+        initialCurrentLifeAndHp();
+        isToCreateRainFire = false;
         Intent myIntent = new Intent(GameActivity.this,
                 ScoreSheetActivity.class);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        myIntent.putExtra("myPoints", myPoints);
+        //myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        finish();
+        myIntent.putExtra(Global_Variable.MY_POINTS, myPoints);
+        isToCreateRainFire = false;
         myPoints = 0;
         startActivity(myIntent);
     }
