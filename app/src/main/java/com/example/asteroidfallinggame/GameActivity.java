@@ -233,7 +233,7 @@ public class GameActivity extends AppCompatActivity  {
         //fireAttack.setImageBitmap(fireBmp);
         fireAttack.animate()
                 .translationY((int)(mainActivityHeight*0.85))
-                .setDuration(5000)
+                .setDuration(Global_Variable.DURATION_OF_FIRE_ANIMATE)
                 .withEndAction(new Runnable() {
                     @Override
                     public void run() {
