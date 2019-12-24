@@ -17,5 +17,18 @@ class Global_Variable {
     public static final int LIFE_DIDACTIC = 20;
     public static final int STARTED_HP = 100;
     public static final int POINTS_PER_FIREATTACK = 10;
+    public static final String USERNAME_COLUMN = "username";
+    public static final String APPLICATION_USERS_TABLE_NAME = "ApplicationUsers";
+    public static final String SIGN_UP = "Sign Up";
+    public static final String MISSING_INFO_MSG = "Missing Information";
+    public static final String MISSING_INFO_BODY_MSG = "Username or password are empty";
+    public static final String USER_EXIST_MSG = "User already exist";
+    public static final String USER_EXIST_BODY_MSG = "Choose another username";
+    public static final String USER_NOT_EXIST_MSG = "User NOT exist";
+    public static final String USER_NOT_EXIST_BODY_MSG = "Details are not correct";
+    private static int id = 1;
+    public static int GetID() {
+        return id++;
+    }
 }
 

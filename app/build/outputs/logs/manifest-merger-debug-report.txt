@@ -6,6 +6,12 @@ INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\mai
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\dfb17c32c9e1bced7bb89f3e844a7607\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\82f06c80a0e643d240450c2504354060\firebase-auth-interop-18.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\25bfa9abbe57efa7109f3ed8175af34b\fragment-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\91a2e0650e476867729e44e6c1acc534\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\67e3a22614326cadf216274f01d6d423\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -31,6 +37,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\dor\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e72949b043b8df7a6068dab5e7cd21f2\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\2d1f640c1b4beb33089ff5c91bbd7f31\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\7643b03a14eef61672a51dc8942c65c9\firebase-database-collection-17.0.0\AndroidManifest.xml:2:1-7:12
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-24:12
@@ -52,6 +59,18 @@ application
 ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:5:5-22:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\82f06c80a0e643d240450c2504354060\firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\82f06c80a0e643d240450c2504354060\firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:12:5-24:19
+MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:12:5-24:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\144fdb6eac090fb35b1d84279c68b489\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
@@ -102,6 +121,18 @@ MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\dor\.gradle\caches\tra
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\dfb17c32c9e1bced7bb89f3e844a7607\appcompat-1.0.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\82f06c80a0e643d240450c2504354060\firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\82f06c80a0e643d240450c2504354060\firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\25bfa9abbe57efa7109f3ed8175af34b\fragment-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\25bfa9abbe57efa7109f3ed8175af34b\fragment-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\91a2e0650e476867729e44e6c1acc534\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
@@ -152,6 +183,8 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\dor\.gradle\caches\
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e72949b043b8df7a6068dab5e7cd21f2\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\2d1f640c1b4beb33089ff5c91bbd7f31\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\2d1f640c1b4beb33089ff5c91bbd7f31\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\7643b03a14eef61672a51dc8942c65c9\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\7643b03a14eef61672a51dc8942c65c9\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -162,3 +195,53 @@ INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\mai
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:25:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:26:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:13:9-17:35
+MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:13:9-17:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:31:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:17:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:15:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:30:13-84
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\705e2b8d5429eae8daed45de4cb19a33\firebase-database-19.2.0\AndroidManifest.xml:33:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:19:9-23:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:21:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:22:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\cc6fccc44380da53d1c5f0448200394f\firebase-common-19.2.0\AndroidManifest.xml:20:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\77f0225d41bc6e571279d51e579f08d5\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58

@@ -1,6 +1,8 @@
 package com.example.asteroidfallinggame;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -17,6 +19,7 @@ public class ScoreSheetActivity extends AppCompatActivity {
     private int mainActivityWitdh;
     private int mainActivityHeight;
     private LinearLayout linearLayout;
+    private Fragment fragment;
     private static int maxPointAchieved = 0;
     private static int currentPoints = 0;
     private static int amountOfGamesPlayed = 0;
@@ -50,6 +53,10 @@ public class ScoreSheetActivity extends AppCompatActivity {
         welcomeButton.setBackgroundResource(R.color.headerColor);
         welcomeButton.setTextColor(getApplication().getResources().getColor(R.color.colorBlack));
         linearLayout.addView(welcomeButton);
+
+    }
+    private void addFragment(){
+
     }
     private void addLabel(String text,int number){
         LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams((int)(mainActivityWitdh *0.9),mainActivityHeight/20);
