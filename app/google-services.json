@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "7694454113",
+    "firebase_url": "https://asteroidfallinggame.firebaseio.com",
+    "project_id": "asteroidfallinggame",
+    "storage_bucket": "asteroidfallinggame.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7694454113:android:2d145183a8d8cc729b0920",
+        "android_client_info": {
+          "package_name": "com.example.asteroidfallinggame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7694454113-ria2bisba7lboqrs2vthpgbjnr1dda9g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asteroidfallinggame",
+            "certificate_hash": "f0dabea922e3ced1730c047e3a2acfb5625a4110"
+          }
+        },
+        {
+          "client_id": "7694454113-fc4ulgpio5chpt8vvs0gdt87mqp64hef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7zf9jwKeClCR9m5D2Up0WZBzPi_ymuYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7694454113-fc4ulgpio5chpt8vvs0gdt87mqp64hef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

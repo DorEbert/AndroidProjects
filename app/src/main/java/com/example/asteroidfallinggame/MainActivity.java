@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loginButtonLayoutParams.setMargins(0
                 ,mainActivityHeight/40
                 ,0
-                ,mainActivityHeight/20);
+                ,mainActivityHeight/40);
         signUpButton.setLayoutParams(loginButtonLayoutParams);
         signUpButton.setBackgroundResource(R.color.loginViewColor);
         signUpButton.setTextColor(getApplication().getResources().getColor(R.color.colorBlack));

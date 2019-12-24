@@ -17,7 +17,11 @@ public class FireBaseUtill {
     private static FirebaseDatabase getInstance()
     {
         if (databaseReference == null) {
-            databaseReference = FirebaseDatabase.getInstance();
+            try {
+                databaseReference = FirebaseDatabase.getInstance();
+            }catch(Exception e){
+                e.getMessage();
+            }
             if(login == null){
                 login = new UserModel[1];
             }

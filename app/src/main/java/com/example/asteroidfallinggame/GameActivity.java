@@ -232,7 +232,7 @@ public class GameActivity extends AppCompatActivity  {
         final ImageView fireAttack = fireAttackProducer.getFireAttack(this, mainActivityWitdh);
         //fireAttack.setImageBitmap(fireBmp);
         fireAttack.animate()
-                .translationY(mainActivityHeight)
+                .translationY((int)(mainActivityHeight*0.85))
                 .setDuration(5000)
                 .withEndAction(new Runnable() {
                     @Override
