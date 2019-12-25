@@ -1,11 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\85843906538799809b860890e03c3306\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\f3727a8777fd24b60f54249987d59532\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:16:1-28:12
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\36fee3d9fc0355759334f269df90489b\firebase-auth-interop-18.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9aa43e4d859846d255e0c2916968f517\play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
@@ -38,33 +39,49 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\dor\.gra
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\86fe573e00c587008c6329aa2663058c\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\be7acfdbfd31e8a0b5dad63939a8f1de\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\ab411508481fbbaa4349cd9db2849940\firebase-database-collection-17.0.0\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:4:5-67
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:4:1-63
+MERGED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:21:5-66
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:4:18-60
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:5:1-77
+	android:name
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:5:18-74
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:6:1-75
+	android:name
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:6:18-72
+uses-permission#android.permission.write_e
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:7:1-61
+	android:name
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:7:18-59
 application
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:6:5-23:19
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:10:1-32:15
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\f3727a8777fd24b60f54249987d59532\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\f3727a8777fd24b60f54249987d59532\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:27:5-20
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\36fee3d9fc0355759334f269df90489b\firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
@@ -84,41 +101,51 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\do
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\7af9464903b8a503017df0a97e0258a2\core-1.0.1\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:16:5-31
 	android:label
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:13:5-37
 	android:roundIcon
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:15:5-50
 	android:largeHeap
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:10:9-33
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:14:5-29
 	android:icon
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:8:9-43
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:12:5-39
 	android:allowBackup
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:11:5-31
 	android:theme
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:17:5-36
 activity#com.example.asteroidfallinggame.ScoreSheetActivity
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:14:9-65
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:18:5-61
 	android:name
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:14:19-53
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:18:15-49
+activity#com.example.asteroidfallinggame.UserMapLocation
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:19:5-58
+	android:name
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:19:15-46
 activity#com.example.asteroidfallinggame.GameActivity
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:15:9-50
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:20:5-46
 	android:name
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:15:19-47
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:20:15-43
 activity#com.example.asteroidfallinggame.MainActivity
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:16:9-22:20
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:21:5-27:16
 	android:name
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:16:19-47
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:21:15-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:23:9-26:25
 action#android.intent.action.MAIN
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:24:13-65
 	android:name
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:24:21-62
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:25:13-73
 	android:name
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:25:23-70
+meta-data#com.google.android.gms.API_KEY
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:29:5-31:67
+	android:value
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:31:9-64
+	android:name
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:30:9-54
 uses-sdk
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
@@ -127,6 +154,8 @@ MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\dor\.gradle\caches\tra
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\85843906538799809b860890e03c3306\appcompat-1.0.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\f3727a8777fd24b60f54249987d59532\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\f3727a8777fd24b60f54249987d59532\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:26:5-42
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\36fee3d9fc0355759334f269df90489b\firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
@@ -202,9 +231,17 @@ INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\mai
 		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
+ADDED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:20:5-78
+MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:25:22-76
+		ADDED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:20:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:9.0.1] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\b22c4174c1a8da7f00587eaeac72c4a9\jetified-play-services-maps-9.0.1\AndroidManifest.xml:24:8-31
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\9209bec148561620729e9a8f50f40b76\firebase-database-19.2.0\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\dor\.gradle\caches\transforms-2\files-2.1\c0b8405c419ae1527bc387c260098990\firebase-common-19.2.0\AndroidManifest.xml:13:9-17:35

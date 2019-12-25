@@ -257,6 +257,10 @@ public class GameActivity extends AppCompatActivity  {
         myIntent.putExtra(Global_Variable.MY_POINTS, myPoints);
         isToCreateRainFire = false;
         myPoints = 0;
-        startActivity(myIntent);
+        try {
+            startActivity(myIntent);
+        }catch (Exception e){
+            e.getMessage();
+        }
     }
 }

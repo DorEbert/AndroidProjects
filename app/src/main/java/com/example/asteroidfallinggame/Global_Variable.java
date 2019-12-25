@@ -27,6 +27,7 @@ class Global_Variable {
     public static final String USER_NOT_EXIST_MSG = "User NOT exist";
     public static final String USER_NOT_EXIST_BODY_MSG = "Details are not correct";
     public static final long DURATION_OF_FIRE_ANIMATE = 5000;
+    public static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";
     private static int id = 1;
     public static int GetID() {
         return id++;

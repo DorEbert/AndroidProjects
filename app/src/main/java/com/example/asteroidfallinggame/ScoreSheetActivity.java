@@ -4,10 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -15,10 +21,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.Map;
+
 public class ScoreSheetActivity extends AppCompatActivity {
     private int mainActivityWitdh;
     private int mainActivityHeight;
     private LinearLayout linearLayout;
+    private GoogleMap mGoogleMap;
+    private MapView mMapView;
+    private View nView;
     private Fragment fragment;
     private static int maxPointAchieved = 0;
     private static int currentPoints = 0;
@@ -109,6 +120,8 @@ public class ScoreSheetActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-
+        Intent myIntent = new Intent(ScoreSheetActivity.this,
+                UserMapLocation.class);
+        startActivity(myIntent);
     }
 }
