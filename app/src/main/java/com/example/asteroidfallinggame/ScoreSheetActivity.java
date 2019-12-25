@@ -3,6 +3,7 @@ package com.example.asteroidfallinggame;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -39,7 +40,7 @@ public class ScoreSheetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_sheet);
-        mainActivityWitdh = getResources().getDisplayMetrics().widthPixels;
+        /*mainActivityWitdh = getResources().getDisplayMetrics().widthPixels;
         mainActivityHeight = getResources().getDisplayMetrics().heightPixels;
         linearLayout = findViewById(R.id.linear_layout);
         addHeadLine();
@@ -51,7 +52,8 @@ public class ScoreSheetActivity extends AppCompatActivity {
         addLabel(Global_Variable.CURRENT_POINTS,currentPoints);
         addLabel(Global_Variable.MAX_POINTS_ACHIEVED,maxPointAchieved);
         addLabel(Global_Variable.GAMES_PLAYED,amountOfGamesPlayed);
-        addButton();
+        addButton();*/
+        addFragment();
     }
     private void addHeadLine(){
         //Set Button Settings
@@ -67,6 +69,12 @@ public class ScoreSheetActivity extends AppCompatActivity {
 
     }
     private void addFragment(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        UserMapLocation userMapLocation = new UserMapLocation();
+        userMapLocation.
+        fragmentTransaction.add(R.id.fragmentContainer,userMapLocation);
+        fragmentTransaction.commit();
 
     }
     private void addLabel(String text,int number){
@@ -120,8 +128,8 @@ public class ScoreSheetActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-        Intent myIntent = new Intent(ScoreSheetActivity.this,
+        /*Intent myIntent = new Intent(ScoreSheetActivity.this,
                 UserMapLocation.class);
-        startActivity(myIntent);
+        startActivity(myIntent);*/
     }
 }

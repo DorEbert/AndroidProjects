@@ -119,9 +119,9 @@ ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\A
 	android:name
 		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:18:15-49
 activity#com.example.asteroidfallinggame.UserMapLocation
-ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:19:5-58
+ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:19:5-89
 	android:name
-		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:19:15-46
+		ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:19:15-77
 activity#com.example.asteroidfallinggame.GameActivity
 ADDED from C:\Users\dor\AndroidStudioProjects\AsteroidFallingGame\app\src\main\AndroidManifest.xml:20:5-46
 	android:name

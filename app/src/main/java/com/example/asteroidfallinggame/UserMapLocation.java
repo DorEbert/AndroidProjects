@@ -31,7 +31,7 @@ public class UserMapLocation extends Fragment implements OnMapReadyCallback {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.activity_user_map_location,container,false);
+        mView = inflater.inflate(R.layout.activity_score_sheet,container,false);
         return mView;
     }
 
