@@ -1,46 +1,45 @@
 package com.example.asteroidfallinggame;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.graphics.Bitmap;
-import android.widget.EditText;
-import android.graphics.BitmapFactory;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private LinearLayout linearLayout;
-    private UserModel[] login;
+    private ApplicationUserModel[] login;
     private int mainActivityWitdh;
     private int mainActivityHeight;
     private int usernameTextboxID;
 
     private FireBaseUtill fireBaseUtill;
     private int passwordTextboxID;
-    private UserModel the_user;
+    private UserModel2 the_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fireBaseUtill = new FireBaseUtill();
-        login = new UserModel[1];
+        login = new ApplicationUserModel[1];
 
         // initial local variables
         mainActivityWitdh = getResources().getDisplayMetrics().widthPixels;
@@ -103,10 +102,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                         e.getMessage();
                                     }
                                 }
-                                addUser();
-                                Intent myIntent = new Intent(MainActivity.this,
-                                        GameActivity.class);
-                                startActivity(myIntent);
+                                ApplicationUserModel theNewUser = addUser();
+                                if(theNewUser == null){
+                                    showAlertDialog(Global_Variable.ERROR_SIGN_UP, Global_Variable.ERROR_SIGN_UP_BODY_MSG);
+                                    return;
+                                }
+                                startNewActivity(theNewUser);
                             }
                             @Override
                             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -231,14 +232,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             try {
                                 String userNameFireBaes = usersSnapShot.child(Global_Variable.USERNAME_COLUMN).getValue().toString();
                                 String passwordFireBaes = usersSnapShot.child(Global_Variable.PASSWORD.toLowerCase()).getValue().toString();
+                                String ID = usersSnapShot.child(Global_Variable.APPLICATION_USER_ID).getValue().toString();
                                 if (userNameFireBaes.equals(usernameString)
                                         && passwordFireBaes.equals(passwordString))
-                                    login[0] = new UserModel();
-                                    login[0].setUsername(userNameFireBaes);
-                                    login[0].setPassword(passwordFireBaes);
-                                    Intent myIntent = new Intent(MainActivity.this,
-                                            GameActivity.class);
-                                    startActivity(myIntent);
+                                    login[0] = new ApplicationUserModel(ID,usernameString,passwordFireBaes);
+                                    startNewActivity(login[0]);
                                     break;
                             }
                             catch(Exception e){
@@ -280,18 +278,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog alert = builder.create();
         alert.show();
     }
-    private boolean addUser(String usernameString,String passwordString){
+    private ApplicationUserModel addUser(String usernameString,String passwordString){
         if(usernameString == null || usernameString == ""
         || passwordString == null || passwordString == "")
-            return false;
-        fireBaseUtill.signUp(usernameString,passwordString);
-        return true;
+            return null;
+        return fireBaseUtill.signUp(usernameString,passwordString);
     }
-    private boolean addUser(){
+    private ApplicationUserModel addUser(){
         EditText username = findViewById(usernameTextboxID);
         EditText password = findViewById(passwordTextboxID);
         String usernameString = username.getText().toString();
         String passwordString = password.getText().toString();
         return addUser(usernameString,passwordString);
+    }
+    private void startNewActivity(ApplicationUserModel applicationUserModel){
+        Intent myIntent = new Intent(MainActivity.this,
+                GameActivity.class);
+        Global_Variable.applicationUserModel = applicationUserModel;
+        startActivity(myIntent);
     }
 }

@@ -18,6 +18,7 @@ class Global_Variable {
     public static final int STARTED_HP = 100;
     public static final int POINTS_PER_FIREATTACK = 10;
     public static final String USERNAME_COLUMN = "username";
+    public static final String APPLICATION_USER_ID = "userID";
     public static final String APPLICATION_USERS_TABLE_NAME = "ApplicationUsers";
     public static final String SIGN_UP = "Sign Up";
     public static final String MISSING_INFO_MSG = "Missing Information";
@@ -28,6 +29,10 @@ class Global_Variable {
     public static final String USER_NOT_EXIST_BODY_MSG = "Details are not correct";
     public static final long DURATION_OF_FIRE_ANIMATE = 5000;
     public static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";
+    public static final String ERROR_SIGN_UP = "Error";
+    public static final String ERROR_SIGN_UP_BODY_MSG = "Error signing up, Might be network problem";
+    public static final String USER_LOGGED = "UsedLoggedIn";
+    public static ApplicationUserModel applicationUserModel;
     private static int id = 1;
     public static int GetID() {
         return id++;

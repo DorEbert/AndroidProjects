@@ -11,13 +11,19 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-public class ScoreSheetActivity extends AppCompatActivity {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+    private GoogleMap mMap;
     private final static int FRAGMENT_ID = 0x101;
     private int mainActivityWitdh;
     private int mainActivityHeight;
@@ -29,11 +35,10 @@ public class ScoreSheetActivity extends AppCompatActivity {
     private static int maxPointAchieved = 0;
     private static int currentPoints = 0;
     private static int amountOfGamesPlayed = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score_sheet);
+        setContentView(R.layout.activity_maps);
         mainActivityWitdh = getResources().getDisplayMetrics().widthPixels;
         mainActivityHeight = getResources().getDisplayMetrics().heightPixels;
         linearLayout = findViewById(R.id.linear_layout);
@@ -47,7 +52,25 @@ public class ScoreSheetActivity extends AppCompatActivity {
         addLabel(Global_Variable.MAX_POINTS_ACHIEVED,maxPointAchieved);
         addLabel(Global_Variable.GAMES_PLAYED,amountOfGamesPlayed);
         addButton();
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        addMapFragment();
     }
+    public void addMapFragment(){
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
     private void addHeadLine(){
         //Set Button Settings
         Button welcomeButton = new Button(this);
@@ -93,7 +116,7 @@ public class ScoreSheetActivity extends AppCompatActivity {
         Button loginButton = new Button(this);
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myIntent = new Intent(ScoreSheetActivity.this,
+                Intent myIntent = new Intent(MapsActivity.this,
                         GameActivity.class);
                 startActivity(myIntent);
             }
@@ -110,11 +133,5 @@ public class ScoreSheetActivity extends AppCompatActivity {
         loginButton.setBackgroundResource(R.color.loginViewColor);
         loginButton.setTextColor(getApplication().getResources().getColor(R.color.colorBlack));
         linearLayout.addView(loginButton);
-    }
-    @Override
-    public void onBackPressed(){
-        /*Intent myIntent = new Intent(ScoreSheetActivity.this,
-                UserMapLocation.class);
-        startActivity(myIntent);*/
     }
 }

@@ -1,10 +1,10 @@
 package com.example.asteroidfallinggame;
 
-class UserModel {
+class UserModel2 {
     private String id;
     private String username;
     private String password;
-    public UserModel(){
+    public UserModel2(){
 
     }
     public String getUsername() {

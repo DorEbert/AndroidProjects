@@ -1,7 +1,5 @@
 package com.example.asteroidfallinggame;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,11 +11,12 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
@@ -251,7 +250,7 @@ public class GameActivity extends AppCompatActivity  {
         initialCurrentLifeAndHp();
         isToCreateRainFire = false;
         Intent myIntent = new Intent(GameActivity.this,
-                ScoreSheetActivity.class);
+                MapsActivity.class);
         //myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         myIntent.putExtra(Global_Variable.MY_POINTS, myPoints);
