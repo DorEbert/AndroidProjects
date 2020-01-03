@@ -32,13 +32,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private MapView mMapView;
     private View nView;
     private Fragment fragment;
-    private static int maxPointAchieved = 0;
+    private ApplicationUserModel applicationUserModel;
     private static int currentPoints = 0;
     private static int amountOfGamesPlayed = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        applicationUserModel = Global_Variable.applicationUserModel;
         mainActivityWitdh = getResources().getDisplayMetrics().widthPixels;
         mainActivityHeight = getResources().getDisplayMetrics().heightPixels;
         linearLayout = findViewById(R.id.linear_layout);
@@ -46,10 +47,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         addImage();
         currentPoints = getIntent().getExtras().getInt(Global_Variable.MY_POINTS);
         amountOfGamesPlayed++;
-        if(currentPoints > maxPointAchieved)
-            maxPointAchieved = currentPoints;
+        if(currentPoints > applicationUserModel.maxPointAchieved)
+            applicationUserModel.maxPointAchieved = currentPoints;
         addLabel(Global_Variable.CURRENT_POINTS,currentPoints);
-        addLabel(Global_Variable.MAX_POINTS_ACHIEVED,maxPointAchieved);
+        addLabel(Global_Variable.MAX_POINTS_ACHIEVED,applicationUserModel.maxPointAchieved);
         addLabel(Global_Variable.GAMES_PLAYED,amountOfGamesPlayed);
         addButton();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
