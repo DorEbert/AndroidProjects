@@ -32,7 +32,18 @@ class Global_Variable {
     public static final String ERROR_SIGN_UP = "Error";
     public static final String ERROR_SIGN_UP_BODY_MSG = "Error signing up, Might be network problem";
     public static final String USER_LOGGED = "UsedLoggedIn";
+    public static final String SCORE = "Scores";
+    public static final String SCORE_SHEET_TABLE_NAME = "ScoreSheet";
+    public static final String SCORE_COLUMN = "scoreAchieved";
+    public static final int TOP_RESULTS = 7;
+    public static final String LOCATION_COLUMN = "location";
+    public static final String LATITUDE_COLUMN = "latitude";
+    public static final String LONGITUDE_COLUMN = "longitude";
+    public static final double CHANGE_OF_PRODUCE_FIRE_ATTACK = 0.85;
+    public static final int POINT_FOR_COLLECTING_COIN = 50;
+    public static final int SPEED_OF_SPACESHIPT = 50;
     public static ApplicationUserModel applicationUserModel;
+    public static FireBaseUtill fireBaseUtill;
     private static int id = 1;
     public static int GetID() {
         return id++;

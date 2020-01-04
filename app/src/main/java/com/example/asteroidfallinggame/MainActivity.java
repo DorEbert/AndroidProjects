@@ -29,16 +29,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int mainActivityWitdh;
     private int mainActivityHeight;
     private int usernameTextboxID;
-
-    private FireBaseUtill fireBaseUtill;
     private int passwordTextboxID;
-    private UserModel2 the_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fireBaseUtill = new FireBaseUtill();
+        Global_Variable.fireBaseUtill = new FireBaseUtill();
         login = new ApplicationUserModel[1];
 
         // initial local variables
@@ -77,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fireBaseUtill.getRefrences().orderByChild(Global_Variable.USERNAME_COLUMN)
+                Global_Variable.fireBaseUtill.getRefrencesApplicationusers().orderByChild(Global_Variable.USERNAME_COLUMN)
                         .addListenerForSingleValueEvent(new ValueEventListener(){
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -218,13 +215,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EditText username = findViewById(usernameTextboxID);
         EditText password = findViewById(passwordTextboxID);
         final String usernameString = username.getText().toString();
-        final String passwordString = username.getText().toString();
+        final String passwordString = password.getText().toString();
         if(usernameString.isEmpty() ||
                 passwordString.isEmpty()){
             showAlertDialog(Global_Variable.MISSING_INFO_MSG,Global_Variable.MISSING_INFO_BODY_MSG);
             return;
         }
-        fireBaseUtill.getRefrences().orderByChild(Global_Variable.USERNAME_COLUMN).equalTo(usernameString)
+        Global_Variable.fireBaseUtill.getRefrencesApplicationusers().orderByChild(Global_Variable.USERNAME_COLUMN).equalTo(usernameString)
                 .addListenerForSingleValueEvent(new ValueEventListener(){
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -282,7 +279,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(usernameString == null || usernameString == ""
         || passwordString == null || passwordString == "")
             return null;
-        return fireBaseUtill.signUp(usernameString,passwordString);
+        return Global_Variable.fireBaseUtill.signUp(usernameString,passwordString);
     }
     private ApplicationUserModel addUser(){
         EditText username = findViewById(usernameTextboxID);
@@ -294,7 +291,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void startNewActivity(ApplicationUserModel applicationUserModel){
         Intent myIntent = new Intent(MainActivity.this,
                 GameActivity.class);
-        Global_Variable.applicationUserModel = applicationUserModel;
+        ((EditText)findViewById(usernameTextboxID)).setText(applicationUserModel.getUsername());
+        ((EditText)findViewById(passwordTextboxID)).setText(applicationUserModel.getPassword());
+                Global_Variable.applicationUserModel = applicationUserModel;
         startActivity(myIntent);
     }
 }

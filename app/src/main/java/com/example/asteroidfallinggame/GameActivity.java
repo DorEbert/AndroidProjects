@@ -6,8 +6,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.graphics.Rect;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -20,10 +23,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class GameActivity extends AppCompatActivity  {
+public class GameActivity extends AppCompatActivity implements SensorEventListener {
+    private SensorManager manager;
     private LinearLayout linearLayout;
     private RelativeLayout fireAttackslinearWrapper;
-    private FireAttackProducer fireAttackProducer;
+    private AstroidProducer fireAttackProducer;
     private boolean isToCreateRainFire;
     private LinearLayout userHPAndLifeChancesLayout;
     private int mainActivityWitdh;
@@ -45,14 +49,19 @@ public class GameActivity extends AppCompatActivity  {
         initialLayoutFireAttack();
         linearLayout.addView(fireAttackslinearWrapper);
         addSpaceShip();
+        manager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        Sensor accel=manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        manager.registerListener(this, accel, SensorManager.SENSOR_DELAY_NORMAL);
         // set Settings for fire attack
-        fireAttackProducer = new FireAttackProducer(mainActivityWitdh/10,mainActivityWitdh/10);
+        fireAttackProducer = new AstroidProducer(mainActivityWitdh/10,mainActivityWitdh/10);
         Bitmap fireBmp= BitmapFactory.decodeResource(getResources(),R.drawable.fireattack);
         fireBmp=Bitmap.createScaledBitmap(fireBmp, fireAttackProducer.fireWidth,fireAttackProducer.fireHeight, true);
+        Bitmap coinBmp= BitmapFactory.decodeResource(getResources(),R.drawable.coin);
+        coinBmp=Bitmap.createScaledBitmap(coinBmp, fireAttackProducer.fireWidth,fireAttackProducer.fireHeight, true);
         fireAttackProducer.fireBmp = fireBmp;
+        fireAttackProducer.coinBmp = coinBmp;
         Random r = new Random();
         startRainFire(fireAttackProducer.fireWidth);
-        linearLayout.addView(spaceShip);
         addTouchEventToSpaceShip();
     }
     private void addLifeChances() {
@@ -74,7 +83,7 @@ public class GameActivity extends AppCompatActivity  {
     }
     private void initialLayoutFireAttack() {
         fireAttackslinearWrapper = new RelativeLayout(this);
-        LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(mainActivityWitdh,(int)(mainActivityHeight * 0.75));
+        LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(mainActivityWitdh,(int)(mainActivityHeight * 0.85));
         fireAttackslinearWrapper.setLayoutParams(lparams);
     }
     private Bitmap getUIBmpForHearts() {
@@ -101,14 +110,16 @@ public class GameActivity extends AppCompatActivity  {
         final int spaceShipWidth=mainActivityWitdh/10;
         final int spaceShipHeight=mainActivityHeight/10;
         spaceShip = new ImageView(this);
-        LinearLayout.LayoutParams spaceShipLayoutParams = new LinearLayout.LayoutParams(spaceShipWidth, spaceShipHeight);
-        //spaceShipLayoutParams.gravity = Gravity.CENTER;
-        spaceShipLayoutParams.gravity = Gravity.CENTER;
-        spaceShip.setLayoutParams(spaceShipLayoutParams);
-        //  Start spaceShipBmp
         Bitmap spaceShipBmp = BitmapFactory.decodeResource(getResources(),R.drawable.spaceship);
         spaceShipBmp =Bitmap.createScaledBitmap(spaceShipBmp,spaceShipWidth, spaceShipHeight, true);
         spaceShip.setImageBitmap(spaceShipBmp);
+        RelativeLayout.LayoutParams imParams =
+                new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        imParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        imParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+        fireAttackslinearWrapper.addView(spaceShip,imParams);
+        //  Start spaceShipBmp
+
         //  End spaceShipBmp
     }
     private synchronized void collisionDetection(final ImageView v1,final ImageView v2){
@@ -122,22 +133,27 @@ public class GameActivity extends AppCompatActivity  {
                             @Override
                             public void run(){
                                     if (isCllision(v1, v2)) {
-                                        healthProgressBar.setProgress((int) (healthProgressBar.getProgress() - Global_Variable.LIFE_DIDACTIC));
-                                        if(healthProgressBar.getProgress() == 0){
-                                            userHPAndLifeChancesLayout.removeView(userHPAndLifeChancesLayout.findViewById(currentLife-1));
-                                            currentLife--;
-                                            healthProgressBar.setProgress(Global_Variable.STARTED_HP);
-                                            if(currentLife <=0 ){
-                                                openScoreSheetActivity();
+                                        int viewID = v1.getId();
+                                        if (viewID % 2 == 0) {
+                                            healthProgressBar.setProgress((int) (healthProgressBar.getProgress() - Global_Variable.LIFE_DIDACTIC));
+                                            if (healthProgressBar.getProgress() == 0) {
+                                                userHPAndLifeChancesLayout.removeView(userHPAndLifeChancesLayout.findViewById(currentLife - 1));
+                                                currentLife--;
+                                                healthProgressBar.setProgress(Global_Variable.STARTED_HP);
+                                                if (currentLife <= 0) {
+                                                    openScoreSheetActivity();
+                                                }
                                             }
+
+                                        } else {
+                                            myPoints+= Global_Variable.POINT_FOR_COLLECTING_COIN;
                                         }
                                         v1.setX(0);
                                         v1.setY(0);
                                         v1.animate().cancel();
                                         fireAttackslinearWrapper.removeView(v1);
-                                }else {
-                                        pointsButton.setText(Global_Variable.CURRENT_POINTS + " : " + myPoints);
                                     }
+                                pointsButton.setText(Global_Variable.CURRENT_POINTS + " : " + myPoints);
                             }
                         });
                     }
@@ -212,6 +228,33 @@ public class GameActivity extends AppCompatActivity  {
             }
         });
     }
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            spaceShip.animate()
+                    .translationX((int)(spaceShip.getWidth()* (-event.values[0])*Global_Variable.SPEED_OF_SPACESHIPT))
+                    .setDuration(Global_Variable.DURATION_OF_FIRE_ANIMATE)
+                    .withEndAction(new Runnable() {
+                        @Override
+                        public void run() {
+                            float nextX = spaceShip.getX();
+                            nextX = nextX > 0? nextX:0;
+                            nextX = nextX < mainActivityWitdh - spaceShip.getWidth()? nextX:mainActivityWitdh-spaceShip.getWidth();
+                            spaceShip.setX(nextX);
+                        }
+                    })
+                    .start();
+            float nextX = spaceShip.getX();
+            nextX = nextX > 0? nextX:0;
+            nextX = nextX < mainActivityWitdh - spaceShip.getWidth()? nextX:mainActivityWitdh-spaceShip.getWidth();
+            spaceShip.setX(nextX);
+        }
+    }
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
+
     private void setSettingOfActivity(){
         mainActivityWitdh = getResources().getDisplayMetrics().widthPixels;
         mainActivityHeight = getResources().getDisplayMetrics().heightPixels;
@@ -231,7 +274,7 @@ public class GameActivity extends AppCompatActivity  {
         final ImageView fireAttack = fireAttackProducer.getFireAttack(this, mainActivityWitdh);
         //fireAttack.setImageBitmap(fireBmp);
         fireAttack.animate()
-                .translationY((int)(mainActivityHeight*0.85))
+                .translationY((int)(mainActivityHeight*0.9))
                 .setDuration(Global_Variable.DURATION_OF_FIRE_ANIMATE)
                 .withEndAction(new Runnable() {
                     @Override
@@ -249,9 +292,7 @@ public class GameActivity extends AppCompatActivity  {
     private void openScoreSheetActivity() {
         initialCurrentLifeAndHp();
         isToCreateRainFire = false;
-        Intent myIntent = new Intent(GameActivity.this,
-                MapsActivity.class);
-        //myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        Intent myIntent = new Intent(GameActivity.this,MapsActivity.class);
         finish();
         myIntent.putExtra(Global_Variable.MY_POINTS, myPoints);
         isToCreateRainFire = false;
@@ -262,4 +303,5 @@ public class GameActivity extends AppCompatActivity  {
             e.getMessage();
         }
     }
+
 }

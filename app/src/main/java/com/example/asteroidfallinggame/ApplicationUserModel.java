@@ -4,7 +4,7 @@ class ApplicationUserModel {
     private String UserID;
     private String username;
     private String password;
-    public static int maxPointAchieved = 0;
+    private int maxPointAchieved = 0;
     public ApplicationUserModel(String id,String username, String password) {
         this.username = username;
         this.password = password;
@@ -20,5 +20,8 @@ class ApplicationUserModel {
     public String getUserID(){
         return UserID;
     }
+    public int getMaxPointAchieved(){ return maxPointAchieved; }
+    public void
+    setMaxPointAchieved(int maxPointAchieved){this.maxPointAchieved = maxPointAchieved;}
 
 }
